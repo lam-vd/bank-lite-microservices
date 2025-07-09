@@ -1,24 +1,17 @@
 syntax = "proto3";
 
-// option này để chỉ định rằng các file được tạo ra sẽ sử dụng gRPC
 option java_multiple_files = true;
-// option này để chỉ định package Java cho các file được tạo ra
 option java_package = "com.banklite.grpc";
-// option này để chỉ định tên lớp Java cho file được tạo ra
 option java_outer_classname = "AccountProto";
 
-// Định nghĩa dịch vụ gRPC cho tài khoản
 service AccountService {
-  rpc GetBalance (BalanceRequest) returns (BalanceResponse);
+  rpc getBalance (BalanceRequest) returns (BalanceResponse);
 }
 
-// Định nghĩa các message được sử dụng trong dịch vụ gRPC
 message BalanceRequest {
-  string account_id = 1;
+  string accountId = 1;
 }
 
-// Định nghĩa message trả về thông tin số dư tài khoản
 message BalanceResponse {
-  string account_id = 1;
-  double balance = 2;
+  double balance = 1;
 }

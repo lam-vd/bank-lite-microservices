@@ -4,5 +4,6 @@
 		"src/main/java",
 		"target/generated-sources/protobuf/java",
 		"target/generated-sources/protobuf/grpc-java"
-	]
+	],
+	"java.compile.nullAnalysis.mode": "automatic"
 }

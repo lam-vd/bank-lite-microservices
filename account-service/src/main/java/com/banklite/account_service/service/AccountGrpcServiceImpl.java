@@ -1,6 +1,6 @@
-package com.banklite.service;
+package com.banklite.account_service.service;
 
-import org.lognet.springboot.grpc.GRpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 import com.banklite.grpc.AccountServiceGrpc;
 import com.banklite.grpc.BalanceRequest;
@@ -8,7 +8,7 @@ import com.banklite.grpc.BalanceResponse;
 
 import io.grpc.stub.StreamObserver;
 
-@GRpcService
+@GrpcService
 public class AccountGrpcServiceImpl extends AccountServiceGrpc.AccountServiceImplBase {
   @Override
   public void getBalance(BalanceRequest request, StreamObserver<BalanceResponse> responseObserver) {
